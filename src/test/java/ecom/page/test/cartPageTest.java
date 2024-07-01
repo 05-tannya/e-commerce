@@ -51,12 +51,14 @@ public class cartPageTest extends DriverBase {
 		System.out.println("check out is performed WITH ITEMS");		
 	}
 	
+	@Test
 	public void checkoutwithoutItemsTest() throws IOException {
 		c= h.MovingToCart();
 		ch = c.ValidateCheckoutButton();
 		System.out.println("check out is performed WITHOUT ITEMS  ");
 	}
 
+	@Test
 	public void ItemRetainIncart() throws IOException {  // after addition of items in cart and moving to checkout screen , when we hit continue shopping the items should stay in the cart 
 		
 		List<WebElement> element = h.addItemsToCart();
